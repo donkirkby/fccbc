@@ -1,0 +1,10 @@
+<project name="RubyTubyTeeVee" default="dist" basedir=".">
+    <description>
+        Transforms XML to HTML and posts the new files.
+    </description>
+	
+	<target name="dist">
+		<mkdir dir="output"/>
+		<style basedir="basic" destdir="output" style="page.xsl"/>
+	</target>
+</project>
