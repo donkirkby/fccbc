@@ -3,12 +3,10 @@
 	<xsl:output method="html" doctype-public="-//W3C//DTD HTML 4.01//EN"
 		doctype-system="http://www.w3.org/TR/html4/strict.dtd" version="4.0"
 		encoding="iso-8859-1" />
-	<xsl:template match="/page">
+	<xsl:template match="page">
 		<html>
 
 			<head>
-				<meta http-equiv="content-type"
-					content="text/html;charset=iso-8859-1" />
 				<title>
 					<xsl:value-of select="@name" />
 					- Families with Children from China
@@ -74,9 +72,20 @@
 					</h2>
 					<img id="sidepics" src="images/sidepics.jpg"
 						alt="happy children" />
-					<p>
-						<a href="#Adoption">Adoption</a>
-					</p>
+					<xsl:for-each select="section">
+						<p>
+							<a href="#{@name}">
+								<xsl:value-of select="@name" />
+							</a>
+						</p>
+					</xsl:for-each>
+					<xsl:for-each select="section">
+						<h3>
+							<xsl:value-of select="@name"/>
+							<a id="{@name}" name="{@name}"></a>
+						</h3>
+						<xsl:copy-of select="*"/>
+					</xsl:for-each>
 				</div>
 			</body>
 		</html>
