@@ -5,6 +5,7 @@
 	
 	<target name="dist">
 		<mkdir dir="output"/>
+		<copy file="../main.css" tofile="output/main.css"/>
 		<style basedir="basic" destdir="output" style="page.xsl"/>
 	</target>
 </project>

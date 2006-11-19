@@ -39,6 +39,10 @@ h3 { font-size : .8em; }
 	background-color: white;
 }
 
+img.right {
+    float: right;
+}
+
 #corner {
 	float: right;
 	height: 106px;
