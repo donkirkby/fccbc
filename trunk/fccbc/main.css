@@ -43,6 +43,10 @@ img.right {
     float: right;
 }
 
+img.left {
+    float: left;
+}
+
 #corner {
 	float: right;
 	height: 106px;
