@@ -8,6 +8,7 @@ body {
 /* here are all the font-size commands in one place */
 body { font-size: 140%; }
 p,ul,ol,td { font-size: .55em; }
+ul ul {font-size: 1em; }
 p.fineprint { font-size: .45em; }
 #slogan { font-size: .65em; }
 #slogan em { font-size: 1.2em; }
