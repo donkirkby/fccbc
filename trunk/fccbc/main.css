@@ -9,12 +9,17 @@ body {
 body { font-size: 140%; }
 p,ul,ol,td { font-size: .55em; }
 ul ul {font-size: 1em; }
-p.fineprint { font-size: .45em; }
+p.fineprint,td.fineprint { font-size: .45em; }
 #slogan { font-size: .65em; }
 #slogan em { font-size: 1.2em; }
 h2 { font-size: 1em; }
-h3 { font-size : .8em; }
+h3,th { font-size : .8em; }
 h4 { font-size : .7em; }
+table { width: 75%; }
+table, td, th { 
+	border: thin solid black; 
+	border-collapse: collapse;
+}
 
 .plumbing {
 	display: none;
