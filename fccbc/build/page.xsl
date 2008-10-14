@@ -3,12 +3,13 @@
 	<xsl:output method="html" doctype-public="-//W3C//DTD HTML 4.01//EN"
 		doctype-system="http://www.w3.org/TR/html4/strict.dtd" version="4.0"
 		encoding="iso-8859-1" />
-	<xsl:template match="page">
+	<xsl:template match="body">
+		<xsl:variable name="page-name" select="h2[1]"/>
 		<html>
 
 			<head>
 				<title>
-					<xsl:value-of select="@name" />
+					<xsl:value-of select="$page-name"/>
 					- Families with Children from China
 				</title>
 				<link rel="Stylesheet" type="text/css" href="main.css" />
@@ -67,25 +68,26 @@
 				</div>
 
 				<div id="content">
-					<h2>
-						<xsl:value-of select="@name" />
-					</h2>
+					<xsl:copy-of select="*"/>
+				<!-- 
+					<xsl:copy-of select="h2[1]"/>
 					<img id="sidepics" src="images/sidepics.jpg"
 						alt="happy children" />
-					<xsl:for-each select="section">
+					<xsl:for-each select="h3">
 						<p>
-							<a href="#{@name}">
-								<xsl:value-of select="@name" />
+							<a href="#{.}">
+								<xsl:value-of select="." />
 							</a>
 						</p>
 					</xsl:for-each>
-					<xsl:for-each select="section">
+					<xsl:for-each select="h3">
 						<h3>
 							<xsl:value-of select="@name"/>
 							<a id="{@name}" name="{@name}"></a>
 						</h3>
 						<xsl:copy-of select="*"/>
 					</xsl:for-each>
+					 -->
 				</div>
 			</body>
 		</html>
