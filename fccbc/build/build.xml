@@ -3,9 +3,17 @@
         Transforms XML to HTML and posts the new files.
     </description>
 	
-	<target name="dist">
+	<target name="tidy">
+		<exec executable="tidy-060405-exe/tidy.exe">
+			<arg value="-mn"/>
+			<arg value="-asxhtml"/>
+			<arg value="downloads/website---events.htm"/>
+		</exec>
+	</target>
+	
+	<target name="dist" depends="tidy">
 		<mkdir dir="output"/>
 		<copy file="../main.css" tofile="output/main.css"/>
-		<style basedir="generated-html" destdir="output" style="page.xsl"/>
+		<style basedir="downloads" destdir="output" style="page.xsl"/>
 	</target>
 </project>
