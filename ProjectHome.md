@@ -1,0 +1,3 @@
+Adding this to a source control system lets me go back and grab last year's events.
+
+If you want to see a page's backup copy, go to the [repository](http://fccbc.googlecode.com/svn/trunk/fccbc/) and click on the name of the page. In order to get old versions of the pages, you'll need to download a subversion client program. It might be easier to go to the Internet Archive's [wayback machine](http://web.archive.org/web/*/http://www.fccbc.ca/).
